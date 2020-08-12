@@ -1,0 +1,11 @@
+.about{
+    /*background-image: url(../assets/back.jpg);*/
+    margin: 5%;
+    background-color: blueviolet;
+    
+}
+
+.about__text{
+    
+    margin: 5%;
+}
