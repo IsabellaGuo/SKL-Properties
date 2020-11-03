@@ -1,0 +1,91 @@
+body,
+input{
+    font-family:"Lato";
+    font-size: 62.5%;
+}
+
+.property__wrapper{
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.property__main{
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+
+}
+
+.property__header{
+    display: flex;
+    width: 40%;
+    margin: 5px 5px 0 50px;
+}
+
+.property__header > img{
+    object-fit: fill;
+    width: 100%;
+    margin: 10px auto;
+    
+}
+.property__banner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.property__info{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    margin: 20px 10px;
+}
+.property__titleleft{
+    margin: 20px 40px;
+    width: 90%;
+}
+
+.property__subNav{
+    width: 90%;
+    margin: 50px 50px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.property__des{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.property__photo{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+.property__fp{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+.property__map{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+
+
+

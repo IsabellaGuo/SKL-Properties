@@ -1,3 +1,9 @@
-*{
-    margin:0
+html, body{
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Lato";
+    overflow: scroll;
 }
+
+
