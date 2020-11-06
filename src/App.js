@@ -12,6 +12,7 @@ import data from "./data.js";
 import Footer from "./components/Footer.js"
 import Feature from './components/Feature';
 import PropertyCard from './components/PropertyCard.js';
+import DataService from './components/DataService.js';
 
 
 
@@ -57,7 +58,7 @@ function App() {
         </Route>
        </Switch>
       </div>
-      
+      <DataService />
     </Router>
     
   ); 
