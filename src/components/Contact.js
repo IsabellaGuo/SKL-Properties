@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../components/Contact.css";
 import * as yup from "yup";
 import axios from "axios";
+import { postData } from '../components/FormService';
 
 function Contact() {
 
@@ -26,6 +27,11 @@ function Contact() {
 
   // temporary state used to display response from API. this is not a commonly used convention
   const [post, setPost] = useState([]);
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    postData(formState)
+  }
 
   //inline validaiton
   const validateChange = (e) => {
@@ -167,7 +173,7 @@ function Contact() {
           {errors.message.length > 0 ? <p className="error">{errors.message}</p> : null}
         </label>
 
-        <button type="submit" disabled={buttonIsDisabled}>Submit</button>
+        <button onClick={onFormSubmit} type="submit" disabled={buttonIsDisabled}>Submit</button>
       </form>
     </div>
   );

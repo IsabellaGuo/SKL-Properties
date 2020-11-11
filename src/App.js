@@ -8,7 +8,7 @@ import Home from "./components/Home.js";
 import Properties from "./components/Properties.js";
 import Property from "./components/Property.js";
 import Contact from "./components/Contact.js";
-import data from "./data.js";
+
 import Footer from "./components/Footer.js"
 import Feature from './components/Feature';
 import PropertyCard from './components/PropertyCard.js';
@@ -19,7 +19,11 @@ import DataService from './components/DataService.js';
 
 function App() {
   
-  const [properties, setProperties] = useState(data)
+  const [properties, setProperties] = useState([])
+
+  const getJSON = (jsonData) => {
+    setProperties(jsonData)
+  }
 
   return (
     <Router>
@@ -58,7 +62,7 @@ function App() {
         </Route>
        </Switch>
       </div>
-      <DataService />
+      <DataService getData={getJSON} />
     </Router>
     
   ); 

@@ -1,8 +1,16 @@
-{
-  "data":[
+[
+     {
+        "address":"Yates on Yates",
+        "id":0,
+        "rent":2800,
+        "src":"./assets/Listing0.jpg",
+        "floorPlan":"https://cdn.decorilla.com/online-decorating/wp-content/uploads/2019/01/luxutry-apartment-design-online-feature.jpg",
+        "subtitle":"2 Bedroom, 2 Bathroom, 1 kitchen",
+        "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
+     },
      {
         "address":"Cydarwood Ave",
-        "id":0,
+        "id":1,
         "rent":4800,
         "src":"./assets/Listing0.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -11,7 +19,7 @@
      },
      {
         "address":"Sheridon Rd",
-        "id":1,
+        "id":2,
         "rent":4800,
         "src":"./assets/Listing1.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -20,7 +28,7 @@
      },
      {
         "address":"Hampton Ave",
-        "id":2,
+        "id":3,
         "rent":4800,
         "src":"./assets/Listing2.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -29,7 +37,7 @@
      },
      {
         "address":"Polo Village",
-        "id":3,
+        "id":4,
         "rent":4800,
         "src":"./assets/Listing3.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -38,7 +46,7 @@
      },
      {
         "address":"Freeman Ave",
-        "id":4,
+        "id":5,
         "rent":4800,
         "src":"./assets/Listing4.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -47,7 +55,7 @@
      },
      {
         "address":"Townley Ave",
-        "id":5,
+        "id":6,
         "rent":4800,
         "src":"./assets/Listing5.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -56,7 +64,7 @@
      },
      {
         "address":"Trent St",
-        "id":6,
+        "id":7,
         "rent":4800,
         "src":"./assets/Listing6.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -65,7 +73,7 @@
      },
      {
         "address":"Yates on Yates",
-        "id":7,
+        "id":8,
         "rent":2800,
         "src":"./assets/Listing7.jpg",
         "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
@@ -73,4 +81,3 @@
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      }
   ]
-}
