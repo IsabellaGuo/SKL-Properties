@@ -3,6 +3,7 @@ import "../components/Contact.css";
 import * as yup from "yup";
 import axios from "axios";
 import { postData } from '../components/FormService';
+import * as emailjs from "emailjs-com";
 
 function Contact() {
 
@@ -30,7 +31,20 @@ function Contact() {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    postData(formState)
+    //postData(formState)
+    emailjs.
+      sendForm(
+        'gmail', 
+        'skl', 
+        '.form', 
+        'user_DPycxJiGC1kXTQZlNkLZT'
+        )
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      
   }
 
   //inline validaiton
@@ -57,6 +71,8 @@ function Contact() {
   // onSubmit function
   const formSubmit = (e) => {
     e.preventDefault(); // <form> onSubmit has default behavior from HTML!
+
+    
 
     // send out POST request with obj as second param, for us that is formState.
     // trigger .catch by changing URL to "https://reqres.in/api/register" -> see step 7 in notion notes
@@ -119,7 +135,7 @@ function Contact() {
    console.log('formState', formState)
   return (
     <div className="contact__main">
-      <form className="form">
+      <form className="form" onSubmit={onFormSubmit}>
         <h2>Contact Me</h2>
 
         <label htmlFor="firstName">
@@ -173,7 +189,7 @@ function Contact() {
           {errors.message.length > 0 ? <p className="error">{errors.message}</p> : null}
         </label>
 
-        <button onClick={onFormSubmit} type="submit" disabled={buttonIsDisabled}>Submit</button>
+        <button type="submit" disabled={buttonIsDisabled}>Submit</button>
       </form>
     </div>
   );
