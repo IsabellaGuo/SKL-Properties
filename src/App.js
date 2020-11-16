@@ -17,6 +17,7 @@ import DataService from './components/DataService.js';
 
 
 
+
 function App() {
   
   const [properties, setProperties] = useState([])
@@ -47,6 +48,7 @@ function App() {
         
         <Route path="/properties">
           <Header />
+         
           <Properties items={properties} />
           <PropertyCard items={properties} />
           <Footer />

@@ -1,12 +1,10 @@
 body,
-input{
-    font-family:"Lato";
-    font-size: 62.5%;
-
-    
+input {
+  font-family: "Lato";
+  font-size: 62.5%;
 }
 
-.properties__banner{
+.properties__banner {
   width: 100%;
   max-width: 1050px;
   margin: auto;
@@ -15,46 +13,21 @@ input{
   align-items: center;
   padding: 20px;
   color: white;
-  
 }
 
-
-
-
-.properties__search{
-  
-  display: flex;
-  color: black;
-  align-items: center;
-  width: 30%;
-  padding: 10px;
-  height: 30px;
-  border: 1px solid lightgray;
-  border-radius: 999px;
-  margin: 0 750px 15px 40px;
-}
-
-.properties__search>input{
+.properties__search > input {
   border: none;
   padding: 10px;
   outline-width: 0;
 }
 
-
-
 .properties__all {
-  
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
-  
-  
 }
 
-
-
-.property__card{
+.property__card {
   margin: 40px auto;
   max-height: 300px;
   width: 300px;
@@ -63,30 +36,24 @@ input{
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   cursor: pointer;
-  
 }
 
 .property__card:hover {
   transform: scale(1.07);
-  
 }
 .property__card > img {
-
   object-fit: fill;
   min-width: 300px;
   min-height: 200px;
   width: 33%;
-
-
 }
 
-.property__cardinfo{
+.property__cardinfo {
   font-size: 0.8rem;
-  text-decoration: none!important;
+  text-decoration: none !important;
   color: black;
-  
 }
 
-.property__text{
+.property__text {
   margin: 5px;
 }

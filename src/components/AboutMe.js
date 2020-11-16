@@ -1,5 +1,5 @@
 import React from 'react';
-import about from "../assets/about.jpg"
+import about from "../assets/about.jpg";
 import "../components/AboutMe.css";
 
 function AboutMe() {

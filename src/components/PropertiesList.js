@@ -8,17 +8,15 @@ function PropertiesList(props) {
     <div className="properties__all">
         { properties.map((item, id) => {
           return (
-            <Link className="property__cardinfo" to={`/properties/${item.id}`}>
-              <React.Fragment key={`pc${id}`}>
-                <div className="property__card">
-                  <img src={item.src} alt={item.address} />
-                  <div className="property__text">
-                    <p>{item.address}</p>
-                    <p>{item.subtitle}</p>
-                    <p>${item.rent}</p>
-                  </div>
+            <Link key={`pc${id}`} className="property__cardinfo" to={`/properties/${item.id}`}>
+              <div className="property__card">
+                <img src={item.src} alt={item.address} />
+                <div className="property__text">
+                  <p>{item.address}</p>
+                  <p>{item.subtitle}</p>
+                  <p>${item.rent}</p>
                 </div>
-              </React.Fragment>
+              </div>
             </Link>
           )
         }

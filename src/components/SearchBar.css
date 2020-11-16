@@ -1,0 +1,11 @@
+.search__bar{
+  display: flex;
+  color: black;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 999px;
+  margin: 0 750px 15px 40px;
+}
