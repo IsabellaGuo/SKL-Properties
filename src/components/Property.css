@@ -27,7 +27,7 @@ input{
     margin: 5px 5px 0 50px;
 }
 
-.property__header > img{
+.property__img > img{
     object-fit: fill;
     width: 100%;
     margin: 10px auto;
@@ -40,7 +40,7 @@ input{
     justify-content: space-around;
 }
 
-.property__info{
+.property__title{
     display: flex;
     flex-direction: column;
     width:40%;
@@ -51,7 +51,7 @@ input{
     width: 90%;
 }
 
-.property__subNav{
+.property__titleright{
     width: 90%;
     margin: 50px 50px 10px 20px;
     display: flex;

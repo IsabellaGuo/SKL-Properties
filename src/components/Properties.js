@@ -12,7 +12,7 @@ function Properties(props) {
   const properties = props.items.slice(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
+  
   const handleChange = event => {
     setSearchTerm(event.target.value);
   };

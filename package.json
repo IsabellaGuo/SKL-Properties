@@ -13,6 +13,7 @@
     "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "firebase": "^8.0.0",
+    "google-map-react": "^2.1.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lorem-ipsum": "^1.4.5",

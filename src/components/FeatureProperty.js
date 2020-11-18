@@ -9,7 +9,7 @@ function FeatureProperty({ id, address, rent, subtitle, image, description }) {
   const history = useHistory();
   console.log(history);
 
-  const routeToShop = () => {
+  const routeToFeature = () => {
     history.push("/properties/feature");
   };
     return (
@@ -25,7 +25,7 @@ function FeatureProperty({ id, address, rent, subtitle, image, description }) {
                 <p className="feature__des">{description}</p>
             
             
-            <button className="feature__button" onClick={routeToShop}>Read More</button>
+            <button className="feature__button" onClick={routeToFeature}>Read More</button>
             </div>
         </div>
     )
