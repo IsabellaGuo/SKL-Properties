@@ -2,10 +2,16 @@
   display: flex;
   color: black;
   align-items: center;
-  width: 30%;
+  width: 90vw;
   padding: 10px;
   height: 30px;
   border: 1px solid lightgray;
   border-radius: 999px;
-  margin: 0 750px 15px 40px;
+  margin: 0 50px 15px 50px;
+}
+.search__icon{
+  margin: 5px, 5px, 5px, 90px;
+}
+.search__input {
+  outline: none!important;
 }

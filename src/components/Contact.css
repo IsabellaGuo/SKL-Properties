@@ -5,10 +5,9 @@
   button {
     font-family: "Lato";
   }
-  
-  
+
 .contact__main{
- background-image: url(../assets/contactme.jpg);
+ background-image: url('/assets/contactme.jpg');
  background-position: center;
  background-size: 100%;
  width: 90%;

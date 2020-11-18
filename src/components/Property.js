@@ -4,9 +4,9 @@ import PropertyDescription from "./PropertyDescription.js";
 import PropertyFloorplan from "./PropertyFloorplan.js";
 import PropertyImg from "./PropertyImg.js";
 import "../components/Property.css";
+import PropertyMap from "./PropertyMap.js"
 
 function Property(props) {
-  console.log(props);
   const params = useParams();
   console.log(params);
   const routeMatch = useRouteMatch();
@@ -15,6 +15,7 @@ function Property(props) {
   const selectedProperty = props.items.find(
     item => item.id === Number(params.id)
   );
+  console.log("selectedProperty", selectedProperty);
   return (
     <div className="property__wrapper">
       <div className="property__banner">
@@ -45,7 +46,7 @@ function Property(props) {
         </div>
 
         <div className="property__img">
-          <img src={selectedProperty.src} alt={selectedProperty.address} />
+          <img src={`../${selectedProperty.src}`} alt={selectedProperty.address} />
         </div>
       </div>
 
@@ -57,6 +58,9 @@ function Property(props) {
       </Route>
       <Route path={`${routeMatch.path}/floorplan`}>
         <PropertyFloorplan item={selectedProperty} />
+      </Route>
+      <Route path={`${routeMatch.path}/map`}>
+        <PropertyMap item={selectedProperty} />
       </Route>
     </div>
   );

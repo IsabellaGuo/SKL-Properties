@@ -10,10 +10,10 @@ function SearchBar(props) {
         className="search__input"
         type="text"
         value={props.searchTerm}
-        placeholder="Search"
+        
         onChange={props.handleChange}
       />
-      <SearchIcon />
+      <SearchIcon className="seach__icon" />
     </div>
   );
 }

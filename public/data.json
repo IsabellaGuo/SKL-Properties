@@ -6,7 +6,7 @@
         "la": 48.426090,
         "lo": -123.360220,
         "src":"./assets/Listing0.jpg",
-        "floorPlan":"https://cdn.decorilla.com/online-decorating/wp-content/uploads/2019/01/luxutry-apartment-design-online-feature.jpg",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"2 Bedroom, 2 Bathroom, 1 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -17,7 +17,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing1.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -28,7 +28,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing2.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -39,7 +39,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing3.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 1 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -50,7 +50,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing4.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -61,7 +61,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing5.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -72,7 +72,7 @@
         "la": 48.442340,
         "lo": -123.331620,
         "src":"./assets/Listing6.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      },
@@ -83,7 +83,7 @@
         "la": 48.454540,
         "lo": -123.330430,
         "src":"./assets/Listing7.jpg",
-        "floorPlan":"https://images.app.goo.gl/WNgZPQU4vnojEum58",
+        "floorPlan":"./assets/Floorplan0.jpg",
         "subtitle":"6 Bedroom, 3 Bathroom, 2 kitchen",
         "description":"Lorem ipsum odor amet, consectetuer adipiscing elit. Eget parturient senectus commodo litora dolor taciti augue. Molestie molestie neque viverra lacinia praesent risus quis auctor. Malesuada cursus lobortis nascetur; rutrum senectus dis tempus. Cras eu class ipsum proin platea felis torquent quam. Interdum neque aenean lacinia pulvinar ligula."
      }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import skl_logo from "../assets/skl_logo.png";
 import "../components/Home.css";
 
 function Home() {
@@ -8,7 +7,7 @@ function Home() {
     <div className="home__main">
       {/* Logo on the left hand side */}
       <div className="home__left">
-        <img className="bigLogo" src={skl_logo} alt="sklLogo" />
+        <img className="bigLogo" src={'/assets/skl_logo.png'} alt="sklLogo" />
       </div>
       {/* header */}
       <div className="home__right">

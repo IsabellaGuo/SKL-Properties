@@ -1,5 +1,4 @@
 import React from 'react';
-import about from "../assets/about.jpg";
 import "../components/AboutMe.css";
 
 function AboutMe() {
@@ -18,7 +17,7 @@ function AboutMe() {
            
            <img
            className="about__img"
-           src={about}
+           src={'./assets/about.jpg'}
            alt="aboutMePic"
            />
         </div>

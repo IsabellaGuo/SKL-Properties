@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo_header from "../assets/logo_header.png";
+
 import "../components/Header.css";
 import "../Lato/Lato-Bold.ttf"
 
@@ -14,7 +14,7 @@ function Header() {
                 <Link to="/" >
                     <img
                     className="header__logo"
-                    src={logo_header}
+                    src={'/assets/logo_header.png'}
                     alt="logo"
                     />
                 </Link>
