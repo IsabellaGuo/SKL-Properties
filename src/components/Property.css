@@ -36,15 +36,15 @@ input{
 .property__banner{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    
 }
 
 .property__title{
     display: flex;
-    flex-direction: column;
-    width:40%;
-    margin: 20px 10px;
+    flex-direction: row;
+    width:90vw;
+    margin: 5px 10px 0 0;
 }
 .property__titleleft{
     margin: 20px 40px;
