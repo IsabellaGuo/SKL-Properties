@@ -1,46 +1,56 @@
-import React from 'react';
-import { Route, Link, useRouteMatch } from 'react-router-dom';
-import FeatureDescription from "./FeatureDescription.js";
+import React from "react";
+import { Route, Link, useRouteMatch } from "react-router-dom";
+
 import FeatureFloorplan from "./FeatureFloorplan.js";
 import FeatureImg from "./FeatureImg.js";
+import FeatureMap from "./FeatureMap.js";
 import "../components/Feature.css";
 
-function Feature() {
-    
-    const routeMatch = useRouteMatch();
-    //console.log(routeMatch)
+function Feature(props) {
+  console.log("feature", props);
+  const routeMatch = useRouteMatch();
+  //console.log(routeMatch)
+  const feature = props.items[0];
+  console.log("work", feature);
 
-    
-
-    
-    return (
-        <div className="feature__wrapper">
-            <h1>123 Yates Street</h1>
-            
-                <h2>2 Bedroom, 2 Bathroom, 1 kitchen</h2>
-                <h2>$2800</h2>
-            
-            
-            <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2019/01/luxutry-apartment-design-online-feature.jpg" alt="" />
-            <nav className="feature__subNav">
-                            <Link className="feature__des" to={`${routeMatch.url}/description`}>Description</Link>
-                            <Link className="feature__photo" to={`${routeMatch.url}/photos`}>Photos</Link>
-                            <Link className="feature__fp" to={`${routeMatch.url}/floorplan`}>Floorplan</Link>
-                            <Link className="feature__map" to={`${routeMatch.url}/map`}>Map</Link>
-            </nav>
-
-        <Route path={`${routeMatch.path}/description`}>
-            <FeatureDescription  />
-        </Route>
-        <Route path={`${routeMatch.path}/photos`}>
-            <FeatureImg />
-        </Route>
-        <Route path={`${routeMatch.path}/floorplan`}>
-            <FeatureFloorplan  />
-        </Route>
-        </div>
-    );
+  return (
+    <div className="feature__wrapper">
+     <div className="feature__banner">
+         <div className="feature__title">
+             <div className="feature__titleleft">
+      <h1>{feature.address}</h1>
+      <h2>{feature.subtitle}</h2>
+      <h2>${feature.rent}</h2>
+</div>
+      <nav className="feature__titleright">
+        
+        <Link className="feature__photo" to={`${routeMatch.url}/photos`}>
+          Photos
+        </Link>
+        <Link className="feature__fp" to={`${routeMatch.url}/floorplan`}>
+          Floorplan
+        </Link>
+        <Link className="feature__map" to={`${routeMatch.url}/map`}>
+          Map
+        </Link>
+      </nav>
+      </div>
+      <div className="feature__img">
+      <img src={`/${feature.src}`} alt="" />
+      </div>
+     </div>
+      
+      <Route path={`${routeMatch.path}/photos`}>
+        <FeatureImg item={feature}  />
+      </Route>
+      <Route path={`${routeMatch.path}/floorplan`}>
+        <FeatureFloorplan item={feature} />
+      </Route>
+      <Route path={`${routeMatch.path}/map`}>
+        <FeatureMap item={feature} />
+      </Route>
+    </div>
+  );
 }
 
 export default Feature;
-

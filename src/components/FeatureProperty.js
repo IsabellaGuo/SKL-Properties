@@ -4,7 +4,7 @@ import "../components/FeatureProperty.css";
 
 
 
-function FeatureProperty({ id, address, rent, subtitle, image, description }) {
+function FeatureProperty({ id, address, rent, subtitle, image, description, lat, lng, floorplan }) {
 
   const history = useHistory();
   console.log(history);

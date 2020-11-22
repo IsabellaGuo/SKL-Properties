@@ -10,6 +10,11 @@
   cursor: pointer;
   color: black;
 }
+.feature:hover {
+ 
+    transform: scale(1.07);
+
+}
 
 .feature > img {
   object-fit: fill;

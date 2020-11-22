@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function FeatureFloorplan() {
+function FeatureFloorplan(props) {
     return (
-        <div>
-            Floorplan
-        </div>
+        <img
+          src={`/${props.item.floorPlan}`}
+          alt={props.item.address}
+        />
     )
 }
 

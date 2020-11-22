@@ -6,16 +6,13 @@ import {
   InfoWindow
 } from "@react-google-maps/api";
 
-import "./PropertyMap.css";
-
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "100vw",
   height: "100vh"
 };
 
-const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-function PropertyMap(props) {
+function FeatureMap(props) {
   const center = {
     lat: props.item.la,
     lng: props.item.lo
@@ -28,6 +25,7 @@ function PropertyMap(props) {
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Lading Maps";
+
   return (
     <div>
       <GoogleMap
@@ -35,7 +33,7 @@ function PropertyMap(props) {
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}
-       
+        
       >
         <Marker position={center} />
       </GoogleMap>
@@ -43,4 +41,4 @@ function PropertyMap(props) {
   );
 }
 
-export default PropertyMap;
+export default FeatureMap;

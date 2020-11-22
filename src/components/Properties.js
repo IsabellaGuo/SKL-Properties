@@ -10,6 +10,7 @@ import SearchBar from "./SearchBar.js";
 function Properties(props) {
   console.log("properties", props)
   const featuredCard = props.items[0];
+  console.log("featuredCard",featuredCard )
   const properties = props.items.slice(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -49,6 +50,9 @@ function Properties(props) {
                   subtitle={featuredCard.subtitle}
                   description={featuredCard.description}
                   image={featuredCard.src}
+                  lat={featuredCard.la}
+                  lng={featuredCard.lo}
+                  floorplan={featuredCard.floorPlan}
                 />
               )}
               <PropertiesList properties={properties} />

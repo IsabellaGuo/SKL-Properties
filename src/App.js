@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useEffect} from "react-router-dom";
+
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header.js";
@@ -10,7 +10,7 @@ import Property from "./components/Property.js";
 import Contact from "./components/Contact.js";
 
 import Footer from "./components/Footer.js"
-import Feature from './components/Feature';
+import Feature from './components/Feature.js';
 import PropertyCard from './components/PropertyCard.js';
 import DataService from './components/DataService.js';
 
@@ -37,7 +37,7 @@ function App() {
         </Route>
         <Route path="/properties/feature">
           <Header />
-          <Feature />
+          <Feature items={properties} />
           <Footer />
         </Route>
         <Route path="/properties/:id">
