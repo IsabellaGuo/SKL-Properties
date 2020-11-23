@@ -14,68 +14,9 @@ import PropertyMap from "./PropertyMap.js";
 import DataService from "./DataService.js";
 
 function Property(props) {
-  const params = useParams();
-  console.log(params);
-  const routeMatch = useRouteMatch();
-  console.log("routeMatch",routeMatch);
-
-  const selectedProperty = props.items.find(
-    item => item.id === Number(params.id)
-  );
-  console.log("selectedProperty", selectedProperty);
-  return (
-    <div className="property__wrapper">
-      <div className="property__banner">
-        <div className="property__title">
-          <div className="property__titleleft">
-            <h1>{selectedProperty.address}</h1>
-            <h2>{selectedProperty.subtitle}</h2>
-            <h2>${selectedProperty.rent}</h2>
-          </div>
-
-          <nav className="property__titleright">
-            <Link to={`${routeMatch.url}/photos`}>
-              Photos
-            </Link>
-            <Link to={`${routeMatch.url}/floorplan`}>
-              Floorplan
-            </Link>
-            <Link to={`${routeMatch.url}/map`}>
-              Map
-            </Link>
-          </nav>
-        </div>
-        <div className="property__imgdes">
-         
-            <img
-              src={`../${selectedProperty.src}`}
-              alt={selectedProperty.address}
-            />
-          
-          <div className="property__des">{selectedProperty.description}</div>
-        </div>
-      </div>
-
-      <Route path={`${routeMatch.path}/photos`}>
-        <PropertyImg item={selectedProperty} />
-      </Route>
-      <Route path={`${routeMatch.path}/floorplan`}>
-        <PropertyFloorplan item={selectedProperty} />
-      </Route>
-      <Route path={`${routeMatch.path}/map`}>
-        <PropertyMap item={selectedProperty} />
-      </Route>
-    </div>
-  );
-}
-
-export default Property;
-
-{
-  /*function Property(props) {
+  let selectedProperty;
   const [properties, setProperties] = useState([])
   const [obj, setObj] = useState({})
-  // const location = useLocation();
   const params = useParams();
   const routeMatch = useRouteMatch();
   // const id = location.pathname.split('/')[1];
@@ -84,70 +25,83 @@ export default Property;
   // console.log(routeMatch);
 
   useEffect(() => {
-    const selected = properties.find(
-      item => item.id === Number(params.id)
-    );
-    console.log(selected)
-    setObj(selected)
-  }, [properties])
+    let isMounted = true;
+    if (props.length > 0 && isMounted) {
+      const selected = props.find(
+        item => item.id === Number(params.id)
+      );
+      setObj(selected)
+      console.log({selected})
+    }
+    return () => { isMounted = false };
+  })
 
   const getJSON = (jsonData) => {
     setProperties(jsonData)
   }
 
-  const selectedProperty = obj
+  // useEffect(() => {
+  //   const json = properties.find(
+  //     item => item.id === Number(params.id)
+  //   );
+  //   const selected = props.find(
+  //     item => item.id === Number(params.id)
+  //   );
+  //   console.log({json, selected})
+  //   props ? setObj(selected) : setObj(json);
+  // }, [properties])
 
-  console.log("selectedProperty", selectedProperty);
+  useEffect(() => {
+    console.log({obj})
+  }, [obj])
+
+  selectedProperty = obj
   return (
-    <div className="property__wrapper">
-      <div className="property__banner">
-        <div className="property__title">
-          <div className="property__titleleft">
-            <h1>{selectedProperty.address}</h1>
-            <h2>{selectedProperty.subtitle}</h2>
-            <h2>${selectedProperty.rent}</h2>
+    <>
+    { selectedProperty &&
+      <div className="property__wrapper">
+        <div className="property__banner">
+          <div className="property__title">
+            <div className="property__titleleft">
+              <h1>{selectedProperty.address}</h1>
+              <h2>{selectedProperty.subtitle}</h2>
+              <h2>${selectedProperty.rent}</h2>
+            </div>
+
+            <nav className="property__titleright">
+              
+              <Link className="property__photo" to={`${routeMatch.url}/photos`}>
+                Photos
+              </Link>
+              <Link className="property__fp" to={`${routeMatch.url}/floorplan`}>
+                Floorplan
+              </Link>
+              <Link className="property__map" to={`${routeMatch.url}/map`}>
+                Map
+              </Link>
+            </nav>
           </div>
 
-          <nav className="property__titleright">
-            <Link
-              className="property__des"
-              to={`${routeMatch.url}/description`}
-            >
-              Description
-            </Link>
-            <Link className="property__photo" to={`${routeMatch.url}/photos`}>
-              Photos
-            </Link>
-            <Link className="property__fp" to={`${routeMatch.url}/floorplan`}>
-              Floorplan
-            </Link>
-            <Link className="property__map" to={`${routeMatch.url}/map`}>
-              Map
-            </Link>
-          </nav>
+          <div className="property__img">
+            <img src={`../${selectedProperty.src}`} alt={selectedProperty.address} />
+          </div>
         </div>
 
-        <div className="property__img">
-          <img src={`../${selectedProperty.src}`} alt={selectedProperty.address} />
-        </div>
+        
+        <Route path={`${routeMatch.path}/photos`}>
+          <PropertyImg item={selectedProperty} />
+        </Route>
+        <Route path={`${routeMatch.path}/floorplan`}>
+          <PropertyFloorplan item={selectedProperty} />
+        </Route>
+        <Route path={`${routeMatch.path}/map`}>
+          <PropertyMap item={selectedProperty} />
+        </Route>
+        <DataService getData={getJSON} />
       </div>
-
-      <Route path={`${routeMatch.path}/description`}>
-        <PropertyDescription item={selectedProperty} />
-      </Route>
-      <Route path={`${routeMatch.path}/photos`}>
-        <PropertyImg item={selectedProperty} />
-      </Route>
-      <Route path={`${routeMatch.path}/floorplan`}>
-        <PropertyFloorplan item={selectedProperty} />
-      </Route>
-      <Route path={`${routeMatch.path}/map`}>
-        <PropertyMap item={selectedProperty} />
-      </Route>
-      <DataService getData={getJSON} />
-    </div>
+    }
+    </>
   );
 }
 
-export default Property;*/
-}
+export default Property;
