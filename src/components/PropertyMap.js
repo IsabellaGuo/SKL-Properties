@@ -10,8 +10,9 @@ import "./PropertyMap.css";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh"
+  width: "64vw",
+  height: "100vh",
+
 };
 
 const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
@@ -29,9 +30,9 @@ function PropertyMap(props) {
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Lading Maps";
   return (
-    <div>
+    <div className="map__container">
       <GoogleMap
-        className="map__container"
+        className="map__google"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}

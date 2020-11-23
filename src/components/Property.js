@@ -17,7 +17,7 @@ function Property(props) {
   const params = useParams();
   console.log(params);
   const routeMatch = useRouteMatch();
-  console.log(routeMatch);
+  console.log("routeMatch",routeMatch);
 
   const selectedProperty = props.items.find(
     item => item.id === Number(params.id)
@@ -34,13 +34,13 @@ function Property(props) {
           </div>
 
           <nav className="property__titleright">
-            <Link  to={`${routeMatch.url}/photos`}>
+            <Link to={`${routeMatch.url}/photos`}>
               Photos
             </Link>
-            <Link  to={`${routeMatch.url}/floorplan`}>
+            <Link to={`${routeMatch.url}/floorplan`}>
               Floorplan
             </Link>
-            <Link  to={`${routeMatch.url}/map`}>
+            <Link to={`${routeMatch.url}/map`}>
               Map
             </Link>
           </nav>

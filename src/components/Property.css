@@ -29,7 +29,7 @@ input{
 
 .property__imgdes > img{
     
-    width: 45%;
+    width: 40%;
     margin: 10px auto;
     
 }
@@ -86,6 +86,7 @@ input{
     color: #252899;
     transform: scale(1.07);
 }
+
 
 
 
