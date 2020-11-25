@@ -6,22 +6,24 @@ import { postData } from '../components/FormService';
 import * as emailjs from "emailjs-com";
 
 function Contact() {
-
+  //managing state for our form inputs
   const [formState, setFormState] = useState({
       /* keys matchup with the name in input. We have connection between our state accessing the state with the input with the name attribute */
-      firstName: "",
-      lastName: "",
+      name: "",
+      telephone: "",
       email: "",
       message: ""
-  })
+  });
   // server error
   const [serverError, setServerError] = useState("");
+
   //control whether or not the form can be submitted if there are errors in form validation
   const [buttonIsDisabled, setButtonIsDisabled] = useState(true)
+
   // managing state for errors. empty unless inline validation (validateInput) updates key/value pair to have error
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
+    telephone:"",
     email: "",
     message: ""
   });
@@ -87,8 +89,8 @@ function Contact() {
 
         // clear state, could also use a predetermined initial state variable here
         setFormState({
-          firstName: "",
-          lastName:"",
+          name: "",
+          telephone:"",
           email: "",
           message: "",
           
@@ -105,15 +107,20 @@ function Contact() {
       e.persist();
       //e.target.name --> name of the input that fired the event
       //e.target.value --> current value of the input that fired the event
-      const newFormState = {...formState, [e.target.name]:e.target.value}
+      const newFormState = {
+        ...formState, 
+        [e.target.name]:
+        e.target.type === "checkbox" ? e.target.checked : e.target.value
+        };
 
-      setFormState(newFormState)
-  }
+      validateChange(e); // for each change in input, do inline validation
+      setFormState(newFormState);
+  };
 
   // Add a schema, used for all validation to determine whether the input is valid or not
   const formSchema = yup.object().shape({
-    firstName: yup.string().required("First name is required."), // must be a string or else error
-    lastName: yup.string().required("Last name is required."),
+    name: yup.string().required("Name is required."), // must be a string or else error
+    telephone: yup.number().required().positive().integer().min(10)("Must be a valid telephone number"),
     email: yup.string().email(), // must have string present, must be of the shape of an email
     message: yup.string().required("Any question?"),
     
@@ -136,32 +143,33 @@ function Contact() {
   return (
     <div className="contact__main">
       <form className="form" onSubmit={onFormSubmit}>
+      {serverError && <p className="error">{serverError}</p>}
         <h2>Contact Me</h2>
 
-        <label htmlFor="firstName">
-          First Name
+        <label htmlFor="name">
+          Name
           <input
-            placeholder="First Name"
-            id="firstName"
+            placeholder="Name"
+            id="name"
             type="text"
-            name="firstName"
-            value={formState.firstname}
+            name="name"
+            value={formState.name}
             onChange={inputChange}
           />
-          {errors.firstName.length > 0 ? <p className="error">{errors.firstName}</p> : null}
+          {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
         </label>
 
-        <label htmlFor="lastName">
-          Last Name
+        <label htmlFor="telephone">
+          Telephone
           <input
-            placeholder="Last Name"
-            id="lastName"
-            type="text"
-            name="lastName"
-            value={formState.lastname}
+            placeholder="Phone Number"
+            id="telephone"
+            type="number"
+            name="telephone"
+            value={formState.telephone}
             onChange={inputChange}
           />
-          {errors.lastName.length > 0 ? <p className="error">{errors.lastName}</p> : null}
+          {errors.lastName.length > 0 ? <p className="error">{errors.telephone}</p> : null}
         </label>
 
         <label htmlFor="email">
@@ -190,6 +198,7 @@ function Contact() {
         </label>
 
         <button type="submit" disabled={buttonIsDisabled}>Submit</button>
+        <pre>{JSON.stringify(post, null, 2)}</pre>
       </form>
     </div>
   );
