@@ -10,8 +10,8 @@ function Contact() {
   const [formState, setFormState] = useState({
       /* keys matchup with the name in input. We have connection between our state accessing the state with the input with the name attribute */
       name: "",
-      telephone: "",
       email: "",
+      properties: "848 Yates Street",
       message: ""
   });
   // server error
@@ -23,8 +23,8 @@ function Contact() {
   // managing state for errors. empty unless inline validation (validateInput) updates key/value pair to have error
   const [errors, setErrors] = useState({
     name: "",
-    telephone:"",
     email: "",
+    properties: "",
     message: ""
   });
 
@@ -92,6 +92,7 @@ function Contact() {
           name: "",
           telephone:"",
           email: "",
+          properties: "848 Yates Street",
           message: "",
           
         });
@@ -105,6 +106,7 @@ function Contact() {
   //onChange function
   const inputChange = (e) => {
       e.persist();
+      // necessary because we're passing the event asyncronously and we need it to exist even after this function completes (which will complete before validateChange finishes)
       //e.target.name --> name of the input that fired the event
       //e.target.value --> current value of the input that fired the event
       const newFormState = {
@@ -120,8 +122,11 @@ function Contact() {
   // Add a schema, used for all validation to determine whether the input is valid or not
   const formSchema = yup.object().shape({
     name: yup.string().required("Name is required."), // must be a string or else error
-    telephone: yup.number().required().positive().integer().min(10)("Must be a valid telephone number"),
+    //telephone: yup.number().required().positive().integer().min(10)("Must be a valid telephone number"),
     email: yup.string().email(), // must have string present, must be of the shape of an email
+    properties: yup
+      .string()
+      .oneOf(["848 Yates Street", "3990 Cydarwood St", "1700 Sheridan Rd", "135 Hampton Ave", "1678 Freeman Ave","8040 East Saanich Rd", "1742 Townley Street", "2481 Trent St"]),
     message: yup.string().required("Any question?"),
     
   });
@@ -159,7 +164,7 @@ function Contact() {
           {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
         </label>
 
-        <label htmlFor="telephone">
+        {/*<label htmlFor="telephone">
           Telephone
           <input
             placeholder="Phone Number"
@@ -170,7 +175,7 @@ function Contact() {
             onChange={inputChange}
           />
           {errors.lastName.length > 0 ? <p className="error">{errors.telephone}</p> : null}
-        </label>
+  </label>*/}
 
         <label htmlFor="email">
           Email
@@ -185,6 +190,34 @@ function Contact() {
           {errors.email.length > 0 ? <p className="error">{errors.email}</p> : null}
         </label>
 
+        <label htmlFor="properties">
+        Which home would you like to rent?
+        {/* multiselect with select HTML Input w/ multiple attributes. 
+        Value of option is what is passed into e.target.value when clicked. 
+        Value of select is the way to keep formState in sync with the select. 
+        We can also use this to preset values as shown with Tabling in formState's initial value. */}
+        <select
+          id="properties"
+          name="properties"
+          value={formState.properties}
+          onChange={inputChange}
+        >
+          <option value="">--Choose One--</option>
+          {/*e.target.value is value in <option> NOT <select>*/}
+          <option value="848 Yates Street">848 Yates Street</option>
+          <option value="3990 Cydarwood St">3990 Cydarwood St</option>
+          <option value="1700 Sheridan Rd">1700 Sheridan Rd</option>
+          <option value="135 Hampton Ave">135 Hampton Ave</option>
+          <option value="8040 East Saanich Rd">8040 East Saanich Rd</option>
+          <option value="1678 Freeman Ave">1678 Freeman Ave</option>
+          <option value="1742 Townley Street">1742 Townley Street</option>
+          <option value="2481 Trent St">2481 Trent St</option>
+        </select>
+        {errors.properties.length > 0 ? (
+          <p className="error">{errors.properties}</p>
+        ) : null}
+      </label>
+
         <label htmlFor="message">
           Message
           <textarea 
@@ -198,7 +231,7 @@ function Contact() {
         </label>
 
         <button type="submit" disabled={buttonIsDisabled}>Submit</button>
-        <pre>{JSON.stringify(post, null, 2)}</pre>
+        
       </form>
     </div>
   );
