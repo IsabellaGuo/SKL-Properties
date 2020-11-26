@@ -11,7 +11,7 @@ function Contact() {
     /* keys matchup with the name in input. We have connection between our state accessing the state with the input with the name attribute */
     name: "",
     email: "",
-    properties: "848 Yates Street",
+    properties: "",
     message: ""
   });
   // server error
@@ -120,6 +120,7 @@ function Contact() {
     email: yup.string().email(), // must have string present, must be of the shape of an email
     properties: yup
       .string()
+      
       .oneOf([
         "848 Yates Street",
         "3990 Cydarwood St",
@@ -130,6 +131,7 @@ function Contact() {
         "1742 Townley Street",
         "2481 Trent St"
       ]),
+      
     message: yup.string().required("Any question?")
   });
 
@@ -151,7 +153,7 @@ function Contact() {
     <div className="contact__main">
       <form className="form" onSubmit={onFormSubmit}>
         {serverError && <p className="error">{serverError}</p>}
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
 
         <label htmlFor="name">
           Name
