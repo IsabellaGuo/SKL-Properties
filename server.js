@@ -3,7 +3,7 @@ const path = require('path');
 const server = express();
 const fs = require('fs');
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 server.use(express.static('public'));
 server.use(express.json());
 
