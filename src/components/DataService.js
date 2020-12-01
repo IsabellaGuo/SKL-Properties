@@ -10,6 +10,7 @@ function DataService(props) {
       headers.append('Content-Type', 'application/json');
       const res = await fetch('/api/data', { headers });
       const data = await res.json();
+      console.log({res, data})
       setJsonData(data);
    }
    fetchData()
