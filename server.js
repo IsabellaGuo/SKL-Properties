@@ -6,7 +6,6 @@ const fs = require('fs');
 const port = process.env.PORT || 3001;
 server.use(express.static('public'));
 server.use(express.json());
-server.use(proxy('/api/**', { target: `http://localhost:${process.env.PORT || 3001}` }));
 
 server.get("/api/data", (req,res) => {
   res.sendFile(path.join(__dirname, './public', 'data.json'));
