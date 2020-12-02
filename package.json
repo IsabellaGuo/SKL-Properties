@@ -31,7 +31,7 @@
     "start": "concurrently 'react-scripts start' 'npm run server' ",
     "heroku-postbuild": "npm install --prefix . && npm run build --prefix .",
     "server": "nodemon server.js",
-    "prebuild": "CI=''",
+    "build:prod": "CI='' && npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -52,6 +52,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy":"https://localhost:3001",
   "devDependencies": {
     "nodemon": "^2.0.6"
   }
