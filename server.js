@@ -2,10 +2,12 @@ const express = require('express');
 const path = require('path');
 const server = express();
 const fs = require('fs');
+const cors = require('cors');
 
 const port = process.env.PORT || 3001;
 server.use(express.static('public'));
 server.use(express.json());
+server.use(cors());
 
 server.get("/api/data", (req,res) => {
   res.sendFile(path.join(__dirname, './public', 'data.json'));
