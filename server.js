@@ -9,7 +9,7 @@ server.use(express.static('public'));
 server.use(express.json());
 server.use(cors());
 
-server.get("/api/data", (req,res) => {
+server.get("/api/data", (req,res) => { 
   res.sendFile(path.join(__dirname, './public', 'data.json'));
 })
 
