@@ -28,7 +28,7 @@
     "yup": "^0.29.3"
   },
   "scripts": {
-    "start": "concurrently 'react-scripts start' 'npm run server' ",
+    "start": "react-scripts start",
     "heroku-postbuild": "npm install --prefix . && npm run build --prefix .",
     "server": "nodemon server.js",
     "build:prod": "CI='' && npm run build",
