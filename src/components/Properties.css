@@ -6,7 +6,7 @@ input {
 
 .properties__banner {
   width: 100%;
-  max-width: 1050px;
+  max-width: 950px;
   margin: auto;
   display: flex;
   flex-direction: column;

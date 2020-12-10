@@ -20,13 +20,14 @@
   object-fit: fill;
   min-width: 500px;
   min-height: 200px;
-  width: 100%;
+  width: 50%;
 }
 
 .feature__info{
     display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 50%
 }
 
 .feature__info > button {
