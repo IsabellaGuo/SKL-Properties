@@ -2,16 +2,25 @@
   display: flex;
   color: black;
   align-items: center;
-  width: 90vw;
+  
+  max-width: 90%;
+  width: 90%;
   padding: 10px;
   height: 30px;
   border: 1px solid lightgray;
   border-radius: 999px;
   margin: 0 50px 15px 50px;
+  position: relative;
+}
+.search__bar > h2{
+  width: 20%;
+  margin: 0 0 0 25px;
 }
 .search__icon{
   margin: 5px, 5px, 5px, 90px;
 }
 .search__input {
   outline: none!important;
+  font-size: 15px;
+  border: none
 }
