@@ -10,15 +10,15 @@ import "../Lato/Lato-Bold.ttf"
 function Header() {
     return (
         <nav className="header">
-            <div className="logo">
-                <Link to="/" >
+            
+                <Link className="header__logo" to="/" >
                     <img
-                    className="header__logo"
+                    
                     src={'/assets/logo_header.png'}
                     alt="logo"
                     />
                 </Link>
-            </div>
+            
             
             <div className="header__nav">
                 <Link to="/" className="header__link">
@@ -37,6 +37,9 @@ function Header() {
                     <span>Contact Me</span>
                 </Link>
             </div>
+
+            
+
             
             
         

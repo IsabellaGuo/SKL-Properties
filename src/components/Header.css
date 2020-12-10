@@ -1,37 +1,63 @@
 .header{
     display: flex;
     flex-direction: row;
+    
     justify-content: space-around;
     background-color: #252899;
     height: 100px;
     position: sticky;
     top: 0;
     z-index: 100;
-
+    width:100%;
+    
     
 }
-.logo{
-    
-    width: 8%;
-    }
 
 .header__logo{
+    width: 30%;
+}
+
+.header__logo > img{
     height:100%;
+    margin: 0 0 0 50px;
+
     }
 
 .header__nav{
     display: flex;
     align-items: center;
-    width: 70%
+    width: 100%;
+    margin: 0 30px 0 0;
 }
 
 .header__link{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
     font-size: 20px;
     font-family:Lato;
     font-weight: 800; 
     color: white;
-    width: 55%;
+    width: 20%;
     margin: 5%;
     text-decoration: none;
+    
+}
+@media only screen and (max-width: 850px){
+    .header__link{
+    font-size: 15px;
+    font-family:Lato;
+    font-weight: 500; 
+    margin: 2%;
+    }
+    .header__nav{
+        display: flex;
+        width: 70%;
+       
+    }
+}
+
+@media only screen and (max-width: 810px){
     
 }
