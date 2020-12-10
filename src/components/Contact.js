@@ -227,7 +227,7 @@ function Contact() {
           ) : null}
         </label>
 
-        <button type="submit" disabled={buttonIsDisabled}>
+        <button className="contact__button" type="submit" disabled={buttonIsDisabled}>
           Submit
         </button>
       </form>

@@ -44,6 +44,11 @@
     text-decoration: none;
     
 }
+
+.header__drop{
+    display: none;
+}
+
 @media only screen and (max-width: 850px){
     .header__link{
     font-size: 15px;
@@ -59,5 +64,13 @@
 }
 
 @media only screen and (max-width: 810px){
-    
+  .header__nav{
+      display: none;
+  }  
+  .header__drop {
+      display: inline-block;
+  }
+  .header__drop > button{
+      margin: 25px 0 0 0
+  }
 }
