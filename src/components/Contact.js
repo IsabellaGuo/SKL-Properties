@@ -120,7 +120,7 @@ function Contact() {
     email: yup.string().email(), // must have string present, must be of the shape of an email
     properties: yup
       .string()
-      
+
       .oneOf([
         "848 Yates Street",
         "3990 Cydarwood St",
@@ -131,7 +131,7 @@ function Contact() {
         "1742 Townley Street",
         "2481 Trent St"
       ]),
-      
+
     message: yup.string().required("Any question?")
   });
 
@@ -227,7 +227,11 @@ function Contact() {
           ) : null}
         </label>
 
-        <button className="contact__button" type="submit" disabled={buttonIsDisabled}>
+        <button
+          className="contact__button"
+          type="submit"
+          disabled={buttonIsDisabled}
+        >
           Submit
         </button>
       </form>

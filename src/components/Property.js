@@ -12,6 +12,7 @@ import PropertyImg from './PropertyImg.js';
 import '../components/Property.css';
 import PropertyMap from './PropertyMap.js';
 import DataService from './DataService.js';
+import PropertyWalkscore from './PropertyWalkscore.js';
 
 function Property(props) {
   const [property, setProperty] = useState({});
@@ -68,9 +69,11 @@ function Property(props) {
           </Route>
           <Route path={`${routeMatch.path}/map`}>
             <PropertyMap item={selectedProperty} />
+            <PropertyWalkscore item={selectedProperty} />
           </Route>
           <Route path={`${routeMatch.path}/floorplan`}>
             <PropertyFloorplan item={selectedProperty} />
+            
           </Route>
           { props.items.length === 0 && <DataService getData={getJSON} /> }
         </div>

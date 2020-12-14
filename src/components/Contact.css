@@ -6,12 +6,16 @@
   button {
     font-family: "Lato";
   }
+  body, html {
+    height: 100%;
+  }
 
 .contact__main{
  background-image: url('/assets/contactme.jpg');
  background-position: center;
  background-size: 100%;
  width: 90%;
+ height: 100%;
  margin: 0 auto;
  
 }
@@ -68,7 +72,7 @@ textarea
 
 select {
   height: 10%;
-  width: 87%;
+  width: 86%;
 }
 
 select:focus {

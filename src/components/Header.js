@@ -10,11 +10,25 @@ import "../components/Header.css";
 import "../Lato/Lato-Bold.ttf";
 
 const options = [
-  "Home",
-  "About Me",
-  "Properties",
-  "Contact Me"
+  {
+    "name":"Home",
+    "id":"/"
+  },
+  {
+    "name":"About Me",
+    "id":"/about"
+  },
+  {
+    "name":"Properties",
+    "id":"/properties"
+  },
+  {
+    "name":"Contact Me",
+    "id":"/contact"
+  }
 ];
+
+console.log("options",options)
 
 const ITEM_HEIGHT = 48;
 
@@ -78,11 +92,13 @@ function Header() {
         >
           {options.map(option => (
             <MenuItem
-              key={option}
-              selected={option === "Pyxis"}
+              key={option.name}
+              selected={option === "Home"}
               onClick={handleClose}
+              component={Link}
+              to={`${option.id}`}
             >
-              {option}
+              {option.name}
             </MenuItem>
           ))}
         </Menu>

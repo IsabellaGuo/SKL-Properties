@@ -6,7 +6,7 @@ input {
 
 .properties__banner {
   width: 100%;
-  max-width: 950px;
+  max-width: 95%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -56,4 +56,28 @@ input {
 
 .property__text {
   margin: 5px;
+}
+
+@media only screen and (max-width: 850px) {
+  .properties__all{
+    display: flex;
+    flex-direction: colomn;
+    
+  }
+  .property__cardinfo{
+    width: 90%;
+    margin: 0 0 0 20px
+  }
+
+  .property__card{
+    width: 90%;
+    max-height: 500px;
+    margin: 20px 0 20px 30px;
+  }
+  .property__card > img{
+    min-width: 100%;
+    
+    
+  }
+  
 }

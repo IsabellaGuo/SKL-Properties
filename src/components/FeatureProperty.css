@@ -31,18 +31,21 @@
 }
 
 .feature__info > button {
-    display:inline-block;
-    padding:5px;
-    margin:50px;
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Lato';
-    font-weight:500;
-    color:#FFFFFF;
-    background-color:#252899;
-    text-align:center;
-    transition: all 0.2s;
+  width: 250px;
+  display: inline-block;
+  padding: 8px 11px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  outline: none;
+  background-color: #252899;
+  background-image: linear-gradient(to right, #4dd0e1, #252899);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
 .feature__rent{
   font-size: 1rem;
@@ -57,3 +60,7 @@
     background-color: black;
     color: white
     }
+
+@media only screen and (max-width: 950px) {
+  
+}

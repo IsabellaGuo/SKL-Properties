@@ -1,24 +1,26 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import "./PropertyWalkscore.css";
 
-const useScript = url => {
-    useEffect(() => {
-      const script = document.createElement('script');
-  
-      script.src = url;
-      script.async = true;
-  
-      document.body.appendChild(script);
-  
-      return () => {
-        document.body.removeChild(script);
-      }
-    }, [url]);
-  };
+function PropertyWalkscore(props) {
+ console.log("walkscore", props)
+  const parsedAddress = props.item.address.replace(/[^A-Z0-9]+/gi, '-');
+  const walkscoreUrl = `https://www.walkscore.com/serve-walkscore-tile.php?wsid=&s=${parsedAddress}&lat=${props.item.la}&lng=${props.item.lo}&o=v&ts=t&c=t&mm=all&h=864&fh=18&w=860`;
 
-  const MyComponent = props => {
-    useScript('/pp.walk.sc/badge/bike/1678-Freeman-Avenue-Saanich--CA.dash.BC-V8P-1P7.png');
-  
-    
-  }
+  return (
+    <div>
+      <iframe
+        className="property__walkscore"
+        marginHeight="0"
+        marginWidth="0"
+        height="864px"
+        frameBorder="0"
+        scrolling="no"
+        title="Walk Score"
+        width="100%"
+        src={walkscoreUrl}
+      />
+    </div>
+  )
+}
 
-export default PropertyWalkscore
+export default PropertyWalkscore;

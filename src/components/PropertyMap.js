@@ -6,7 +6,9 @@ import {
   InfoWindow
 } from "@react-google-maps/api";
 
-import "./PropertyMap.css";
+
+
+
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -29,10 +31,13 @@ function PropertyMap(props) {
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Lading Maps";
+
+  
+
   return (
-    <div className="map__container">
+    
       <GoogleMap
-        className="map__google"
+  
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}
@@ -40,8 +45,13 @@ function PropertyMap(props) {
       >
         <Marker position={center} />
       </GoogleMap>
-    </div>
+
+   
+    
+
   );
 }
+
+
 
 export default PropertyMap;
