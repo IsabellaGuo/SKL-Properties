@@ -8,7 +8,7 @@ function DataService(props) {
     async function fetchData () {
       const headers = new Headers();
       headers.append('Content-Type', 'application/json');
-      const res = await fetch('https://skl-properties-be.herokuapp.com/', { headers });
+      const res = await fetch('https://skl-properties-be.herokuapp.com/api/data', { headers });
       const data = await res.json();
       console.log({res, data})
       setJsonData(data);
