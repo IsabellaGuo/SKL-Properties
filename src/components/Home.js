@@ -6,9 +6,9 @@ function Home() {
   return (
     <div className="home__main">
       {/* Logo on the left hand side */}
-      <div className="home__left">
+      
         <img className="bigLogo" src={'/assets/skl_logo.png'} alt="sklLogo" />
-      </div>
+      
       {/* header */}
       <div className="home__right">
         <div className="home__nav">

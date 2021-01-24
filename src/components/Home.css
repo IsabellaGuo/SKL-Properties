@@ -6,8 +6,8 @@ input{
 .home__main{
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: scroll;
 }
 
@@ -16,14 +16,24 @@ input{
     flex-direction: column;
     justify-content: space-around;
     background-color: #f2f2f2;
-    width: 100vw;
+    width: 50%;
+   
     padding: 5%;
 
 }
+.bigLogo{
+    
+     width: 50%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 .home__nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 80%;
 }
 
 .home__link{
@@ -41,14 +51,7 @@ input{
     font-size: 1rem;
     padding: 6%;
 }
-.home__left{
-    background-color:#242099;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .home__contact{
     display: flex;
@@ -58,3 +61,5 @@ input{
     font-size: 1rem;
     
 }
+
+
