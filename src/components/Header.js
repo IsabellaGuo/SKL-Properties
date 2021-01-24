@@ -45,8 +45,8 @@ function Header() {
   };
   return (
     <nav className="header">
-      <Link className="header__logo" to="/">
-        <img src={"/assets/logo_header.png"} alt="logo" />
+      <Link  to="/">
+        <img className="header__logo" src={"/assets/logo_header.png"} alt="logo" />
       </Link>
 
       <div className="header__nav">
