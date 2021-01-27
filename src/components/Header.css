@@ -1,5 +1,5 @@
 .header{
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: space-around;
     background-color: #252899;

@@ -5,9 +5,7 @@ input{
     font-size: 62.5%;
     
 }
-.header{
-    display:none;
-}
+
 .app{
     height: 100vh;
     
@@ -72,19 +70,16 @@ input{
 }
 
 @media only screen and (max-width: 1130px){
-    .bigLogo{
-        display: none;
+    .home__main{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: scroll;
     }
-    .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #252899;
-    height: 100px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width:100%;
+    .bigLogo{
+     width: 100%;
+     height: 60%;
     }
     .home__right{
         display: flex;
@@ -97,8 +92,25 @@ input{
     
     }
     .home__nav{
-        display:none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+        margin-top: -350px;
+        margin-left: 20px;
+        
     }
+    .home__welcome{
+        margin-top: 300px;
+    }
+    .home__link{
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #f2f2f2;
+    
+    }
+    
 }
 
 
