@@ -28,7 +28,7 @@ const options = [
   }
 ];
 
-console.log("options",options)
+
 
 const ITEM_HEIGHT = 48;
 

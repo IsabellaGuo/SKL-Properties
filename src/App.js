@@ -54,6 +54,7 @@ function App() {
             <Footer />
           </Route>
           <Route path="/">
+            <Header />
             <Home />
             <Footer />
           </Route>

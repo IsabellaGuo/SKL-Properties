@@ -1,9 +1,12 @@
 import React from 'react'
 
-function FeatureImg() {
+function FeatureImg({ item }) {
+    console.log("featureimg",item)
     return (
         <div>
-            img
+            {item.images.map((src) => (
+                <img src={src} alt="pic" />
+            ))}
         </div>
     )
 }

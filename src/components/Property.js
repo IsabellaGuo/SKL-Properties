@@ -15,6 +15,7 @@ import DataService from './DataService.js';
 import PropertyWalkscore from './PropertyWalkscore.js';
 
 function Property(props) {
+  console.log("properties", props)
   const [property, setProperty] = useState({});
   const params = useParams();
   const location = useLocation();
