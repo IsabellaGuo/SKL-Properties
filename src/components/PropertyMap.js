@@ -37,7 +37,7 @@ function PropertyMap(props) {
   return (
     
       <GoogleMap
-  
+        className="map"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}

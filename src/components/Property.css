@@ -11,7 +11,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    
 }
 
 .property__main{
@@ -85,6 +85,46 @@ input{
 .property__titleright > a:hover{
     color: #252899;
     transform: scale(1.07);
+}
+
+@media only screen and (max-width: 975px){
+    .property__title{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin: 5px 10px 0 0;
+    }
+    .property__titleright{
+        width: 90%;
+        margin: 20px 100px 15px 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size:1rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .property__imgdes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .property__imgdes > img{
+    
+        width: 70%;
+        margin: 10px 20px 10px 65px;
+        
+    }
+    .property__des{
+        width: 70%;
+        margin: 10px 70px 10px 65px;
+        font-size: 1rem;
+    }
+
 }
 
 

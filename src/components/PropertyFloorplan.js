@@ -4,13 +4,13 @@ import "./PropertyFloorplan.css";
 function PropertyFloorplan(props) {
     console.log("floorplan", props)
     return (
-      <div className="img">
+      
         <img
-          
+          className="img"
           src={`/${props.item.floorPlan}`}
           alt={props.item.address}
         />
-      </div>
+      
         
         
     )
