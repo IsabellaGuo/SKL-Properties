@@ -69,7 +69,7 @@
     transition: transform 100ms ease-in;
     cursor: pointer;
     color: black;
-    margin: 20px 10px 20px 0;
+    
   }
   .feature > img {
     object-fit: fill;
@@ -97,6 +97,6 @@
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 60px;
 }
 }
