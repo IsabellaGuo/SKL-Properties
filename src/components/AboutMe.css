@@ -7,8 +7,8 @@
   width: 90%;
   background-color: #f2f2f2;
 
-  margin-left: 55px;
-  margin-top: 2%;
+  margin-left: 35px;
+  
 }
 
 .about__text {
@@ -19,7 +19,8 @@
   color: black;
 }
 .about__words {
-  margin-top: 100px;
+  margin: 60px 10px;
+  
 }
 
 .about__img {
