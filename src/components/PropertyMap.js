@@ -12,9 +12,9 @@ import {
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "64vw",
+  width: "70vw",
   height: "100vh",
-
+  margin: "35px"
 };
 
 const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
@@ -37,7 +37,7 @@ function PropertyMap(props) {
   return (
     
       <GoogleMap
-        className="map"
+        
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}
