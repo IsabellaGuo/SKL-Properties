@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import "./FeatureImg.css";
 
 function FeatureImg({ item }) {
     console.log("featureimg",item)
     return (
-        <div>
+        <div className="feature__imgs">
             {item.images.map((src) => (
-                <img src={src} alt="pic" />
+                <img 
+                className="feature__img"
+                src={src} 
+                alt="pic" />
             ))}
         </div>
     )

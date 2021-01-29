@@ -14,18 +14,7 @@ input{
     
 }
 
-.property__main{
-    display: flex;
-    flex-direction: column;
-    width: 1050px;
 
-}
-
-.property__header{
-    display: flex;
-    width: 40%;
-    margin: 5px 5px 0 50px;
-}
 
 .property__imgdes > img{
     

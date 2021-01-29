@@ -3,25 +3,35 @@ input{
     font-family:"Lato";
     font-size: 62.5%;
 }
-
+.app{
+    box-sizing: border-box;
+}
 .feature__wrapper{
     
-        width: 100%;
-        max-width: 1050px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
 
 
-.feature__img > img{
-    object-fit: fill;
+
+.feature__des{
+    width: 50%;
+    margin: 10px 90px;
+    font-size: 1rem;
+}
+
+.feature__img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
-    margin: 10px auto;
+    box-sizing: border-box;
     
 }
 .feature__banner{
@@ -34,45 +44,82 @@ input{
 .feature__title{
     display: flex;
     flex-direction: row;
-    width:90vw;
-    margin: 5px 10px 0 0;
+    width:100%;
+    margin: 5px 0 0 0;
+    
 }
 .feature__titleleft{
-    margin: 20px 40px;
+    margin: 20px 0  20px 40px;
     width: 90%;
 }
 
 .feature__titleright{
     width: 90%;
-    margin: 50px 50px 10px 20px;
+    margin: 50px 80px 10px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size:1rem;
+    text-decoration: none;
+    color: black;
     
 }
 
-.feature__des{
-    font-size: 1rem;
+.feature__titleright > a {
+    font-size:1rem;
     text-decoration: none;
+    font-weight: bold;
     color: black;
-    padding: 5px;
 }
 
-.feature__photo{
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+.feature__titleright > a:hover{
+    color: #252899;
+    transform: scale(1.07);
 }
-.feature__fp{
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-}
-.feature__map{
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+
+
+
+
+
+
+
+@media only screen and (max-width: 975px){
+    .feature__title{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin: 5px 0 0 0;
+    }
+    .feature__titleright{
+        width: 90%;
+        margin: 20px 0 15px 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size:1rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .feature__img{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .feature__img{
+    
+        width: 70%;
+        margin: 10px 20px 30px 65px;
+        
+    }
+    .feature__des{
+        width: 70%;
+        margin: 10px 70px 50px 65px;
+        font-size: 1rem;
+    }
+
 }

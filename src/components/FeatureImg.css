@@ -1,11 +1,11 @@
-.property__imgs{
+.feature__imgs{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.property__img{
+.feature__img{
     margin: 40px 20px;
     max-height: 400px;
     width: 300px;
@@ -16,7 +16,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-    .property__imgs{
+    .feature__imgs{
         display: flex;
         flex-direction: row;
         justify-content: space-between;

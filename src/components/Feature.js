@@ -43,8 +43,9 @@ function Feature(props) {
       </div>
       {
         location.pathname === routeMatch.url &&
-        <div className="feature__img">
+        <div>
           <img 
+           className="feature__img"
             src={`/${feature.src}`} 
             alt="" 
           />

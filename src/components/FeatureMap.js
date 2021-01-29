@@ -8,8 +8,9 @@ import {
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh"
+  width: "70vw",
+  height: "100vh",
+  margin: "35px"
 };
 
 function FeatureMap(props) {
