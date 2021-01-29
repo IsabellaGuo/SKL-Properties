@@ -1,13 +1,16 @@
 import React from 'react';
-
+import "./PropertyImg.css";
 
 
 function PropertyImg({ item }) {
     console.log("img", item)
     return (
-        <div>
+        <div className="property__imgs">
             {item.images.map((src) => (
-                <img src={src} alt="pic" />
+                <img 
+                className="property__img"
+                src={src} 
+                alt="pic" />
             ))}
         </div>
     );
