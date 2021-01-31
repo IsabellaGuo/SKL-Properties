@@ -62,6 +62,7 @@ function Feature(props) {
       </Route>
       <Route path={`${routeMatch.path}/map`}>
         <FeatureMap item={feature} />
+        <PropertyWalkscore item={feature} />
       </Route>
       <Route path={`${routeMatch.path}/floorplan`}>
         <FeatureFloorplan item={feature} />

@@ -69,6 +69,7 @@
     transition: transform 100ms ease-in;
     cursor: pointer;
     color: black;
+    text-decoration: none;
     
   }
   .feature > img {
@@ -98,6 +99,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   margin-left: 60px;
+  
 }
 .featurecard__des{
   font-size: 0.9rem;
