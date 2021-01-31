@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../components/FeatureProperty.css";
 
 
@@ -13,7 +13,9 @@ function FeatureProperty({ id, address, rent, subtitle, image, description, lat,
     history.push("/properties/feature");
   };
     return (
-        <div className="feature">
+        <Link key={`pc${id}`} className="feature" to={
+            `/properties/feature`}
+        >
             <img src={image} alt="" />
             <div className="feature__info">
                 <h1>{address}</h1>
@@ -22,12 +24,12 @@ function FeatureProperty({ id, address, rent, subtitle, image, description, lat,
                     <strong>{rent}</strong>
                 </p>
                 <h2>{subtitle}</h2>
-                <p className="feature__des">{description}</p>
+                <p className="featurecard__des">{description}</p>
             
             
             <button className="feature__button" onClick={routeToFeature}>Read More</button>
             </div>
-        </div>
+        </Link>
     )
 }
 

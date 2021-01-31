@@ -99,4 +99,10 @@
   margin-top: 20px;
   margin-left: 60px;
 }
+.featurecard__des{
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 10px;
+  width: 100%
+}
 }

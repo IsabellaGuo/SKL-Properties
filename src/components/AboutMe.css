@@ -40,10 +40,14 @@
   }
   .about__img {
     display: flex;
-    margin: 30px auto;
+    width: 60%;
+    margin: 15px auto;
   }
   .about__title{
     display: flex;
     ;
+  }
+  .about__words{
+    margin: 40px auto;
   }
 }
