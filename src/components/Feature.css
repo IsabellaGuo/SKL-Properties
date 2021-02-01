@@ -26,12 +26,19 @@ input{
     font-size: 1rem;
 }
 
-.feature__img{
+.feature__imgdes{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     box-sizing: border-box;
+    margin: 10px auto;
+    
+}
+.feature__imgdes > img{
+    
+    width: 40%;
+    margin: 10px auto;
     
 }
 .feature__banner{
@@ -101,7 +108,7 @@ input{
         color: black;
     }
 
-    .feature__img{
+    .feature__imgdes{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -110,7 +117,7 @@ input{
         box-sizing: border-box;
     }
 
-    .feature__img{
+    .feature__imgdes > img{
     
         width: 70%;
         margin: 10px 20px 30px 65px;

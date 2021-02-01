@@ -8,6 +8,7 @@
   transition: transform 100ms ease-in;
   cursor: pointer;
   color: black;
+  text-decoration: none;
 }
 .feature:hover {
   transform: scale(1.02);
@@ -47,8 +48,13 @@
   font-size: 1rem;
 }
 
+#p{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .feature__des{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
