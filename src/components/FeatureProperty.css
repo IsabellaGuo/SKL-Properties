@@ -26,6 +26,9 @@
     margin: 10px;
     width: 50%
 }
+.featurecard__des{
+  font-size: 1rem;
+}
 
 .feature__info > button {
   width: 250px;
