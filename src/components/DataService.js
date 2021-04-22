@@ -10,20 +10,20 @@ function DataService(props) {
       headers.append('Content-Type', 'application/json');
       const res = await fetch('https://skl-properties-be.herokuapp.com/api/data', { headers });
       const data = await res.json();
-      console.log({res, data})
+      
       setJsonData(data);
    }
    fetchData()
   }, [])
 
-  useEffect(() => {
+  /***useEffect(() => {
     getData(jsonData)
   }, [jsonData])
     return (
         <div>
             
         </div>
-    )
+    )***/
 }
 
 export default DataService

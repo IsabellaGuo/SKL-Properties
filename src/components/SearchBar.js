@@ -3,7 +3,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import "./SearchBar.css";
 
 function SearchBar(props) {
+  
   return (
+    
     <div className="search__bar">
       <h2>Find your next home</h2>
       <input
