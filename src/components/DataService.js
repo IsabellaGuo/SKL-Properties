@@ -16,14 +16,14 @@ function DataService(props) {
    fetchData()
   }, [])
 
-  /***useEffect(() => {
+useEffect(() => {
     getData(jsonData)
   }, [jsonData])
     return (
         <div>
             
         </div>
-    )***/
+    )
 }
 
 export default DataService
