@@ -53,10 +53,14 @@ function App() {
             <Contact />
             <Footer />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             
             <Home />
             <Footer />
+          </Route>
+          <Route path="/">
+            
+            <div>not fuond</div>
           </Route>
         </Switch>
       </div>
