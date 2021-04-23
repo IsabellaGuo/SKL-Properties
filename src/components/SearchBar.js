@@ -12,7 +12,7 @@ function SearchBar(props) {
         className="search__input"
         type="text"
         value={props.searchTerm}
-        placeholder = "find your next home"
+        placeholder = "Find your next home"
         onChange={props.handleChange}
       />
       <SearchIcon className="seach__icon" />
